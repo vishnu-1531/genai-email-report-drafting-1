@@ -1,0 +1,11 @@
+flowchart TD
+    Frontend[React.js with TypeScript Frontend<br/>Presentation Layer]
+    Backend[Flask REST API<br/>Application Layer]
+    Database[(PostgreSQL<br/>Data Layer)]
+    Gemini[Google Gemini API<br/>AI Service Layer]
+    
+    Frontend -->|REST API| Backend
+    Backend -->|ORM/SQL| Database
+    Backend -->|API Calls| Gemini
+    Gemini -->|Generated Content| Backend
+    Backend -->|Response| Frontend
